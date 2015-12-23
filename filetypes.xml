@@ -1,6 +1,7 @@
 <application>
   <component name="FileTypeManager" version="16">
     <extensionMap>
+      <mapping ext="lua" type="Native" />
       <mapping pattern="CM_trades" type="PLAIN_TEXT" />
       <mapping pattern="bower-auto-link" type="PLAIN_TEXT" />
       <mapping ext="node" type="PLAIN_TEXT" />
