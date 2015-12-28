@@ -4,6 +4,7 @@
       <mapping pattern="npm-auto-link" type="PLAIN_TEXT" />
       <mapping pattern="CM_trades" type="PLAIN_TEXT" />
       <mapping pattern="bower-auto-link" type="PLAIN_TEXT" />
+      <mapping pattern="preparationscript.txt" type="PLAIN_TEXT" />
       <mapping ext="node" type="PLAIN_TEXT" />
       <mapping ext="out" type="PLAIN_TEXT" />
     </extensionMap>
