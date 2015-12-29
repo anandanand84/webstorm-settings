@@ -1,0 +1,5 @@
+<application>
+  <component name="PathMacrosImpl">
+    <macro name="networkb_port" value="8400" />
+  </component>
+</application>
