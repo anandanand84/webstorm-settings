@@ -1,5 +1,9 @@
 <application>
   <component name="PathMacrosImpl">
     <macro name="networkb_port" value="8400" />
+    <ignoredMacro name="MESSAGE" />
+    <ignoredMacro name="FILE_PATH" />
+    <ignoredMacro name="LINE" />
+    <ignoredMacro name="COLUMN" />
   </component>
 </application>
