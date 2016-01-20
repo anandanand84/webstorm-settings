@@ -44,6 +44,9 @@
   <action id="SwitchDown">
     <keyboard-shortcut first-keystroke="ctrl alt down" />
   </action>
+  <action id="SwitchLeft">
+    <keyboard-shortcut first-keystroke="ctrl alt left" />
+  </action>
   <action id="SwitchRight">
     <keyboard-shortcut first-keystroke="ctrl alt right" />
   </action>
