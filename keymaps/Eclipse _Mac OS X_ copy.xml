@@ -68,4 +68,8 @@
   <action id="SwitchUp">
     <keyboard-shortcut first-keystroke="ctrl alt up" />
   </action>
+  <action id="liveedit.UpdateRunningApplication">
+    <keyboard-shortcut first-keystroke="meta f10" />
+    <keyboard-shortcut first-keystroke="meta s" />
+  </action>
 </keymap>
