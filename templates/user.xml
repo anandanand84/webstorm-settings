@@ -28,4 +28,36 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
+  <template name="indicatortest" value="var $TYPE$ = require('../../lib/$indicatortype$/$TYPE$');&#10;var assert = require(&quot;assert&quot;);&#10;var data   = require('../data');&#10;&#10;var input$TYPE$ = data.close;&#10;var expectedResult = [&#10;  &#10;];&#10;&#10;describe('$TYPE$', function() {&#10;  it('should calculate $TYPE$ using the calculate method', function() {&#10;    assert.deepEqual($TYPE$.calculate(input$TYPE$, prices), expectedResult, 'Wrong Results');&#10;  });&#10;&#10;  it('should be able to get $TYPE$ for the next bar', function() {&#10;    var $instance$ = new $TYPE$(input$TYPE$, prices);&#10;    assert.deepEqual($instance$.getResult(),  expectedResult, 'Wrong Results while getting results');&#10;  })&#10;&#10;  it('should be able to get $TYPE$ for the next bar using nextValue', function() {&#10;    var $instance$ = new $TYPE$(input$TYPE$, []);&#10;    var results = [];&#10;    prices.forEach(price =&gt; {&#10;      var result = $instance$.nextValue(price);&#10;      if(result)&#10;        results.push(result)&#10;    });&#10;    assert.deepEqual(results,  expectedResult, 'Wrong Results while getting results');&#10;  })&#10;})" description="Create Template for testing indicators" toReformat="true" toShortenFQNames="true">
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="indicatortype" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="instance" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_TEXT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="LUA" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="Bash" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_STATEMENT" value="true" />
+      <option name="TypeScript" value="true" />
+      <option name="Handlebars" value="false" />
+      <option name="JADE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="HAML" value="false" />
+      <option name="DART" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
 </templateSet>
