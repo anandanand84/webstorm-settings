@@ -60,7 +60,7 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="co" value="co(function* () {&#10;    $CODE$      &#10;})" description="Genartor syntax using Co promise" toReformat="true" toShortenFQNames="true">
+  <template name="cogen" value="co(function* () {&#10;    $CODE$      &#10;})" description="Genartor syntax using Co promise" toReformat="true" toShortenFQNames="true">
     <variable name="CODE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="HTML_TEXT" value="true" />
@@ -92,7 +92,13 @@
   </template>
   <template name="cowrap" value="co.wrap(function* () {&#10;    $CODE$      &#10;})" description="Co generator wrap for promises" toReformat="false" toShortenFQNames="true">
     <variable name="CODE" expression="" defaultValue="" alwaysStopAt="true" />
-    <context />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+      <option name="TypeScript" value="true" />
+    </context>
   </template>
   <template name="arrowfn" value="($PARAM$) =&gt; {&#10;  'use strict';&#10;  $CONTENT$&#10;}" description="Arrow function" toReformat="true" toShortenFQNames="true">
     <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
