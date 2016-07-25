@@ -1,0 +1,134 @@
+<templateSet group="user">
+  <template name="batch-scheduler" value="var start = 0;&#10;var end = start + batchsize;&#10;&#10;var startMethod = function(req,res,next){&#10;    fs.readFile('CM_trades', 'utf8', function (err,data) {&#10;        if (err) {&#10;            return console.log(err);&#10;        }&#10;        var lines = data.split('\n');&#10;        console.log('Scheduleing lines between '+start+ ' and ' + end);&#10;        scheduler(lines, start, end)&#10;    });&#10;    res.send('simulation started')&#10;};&#10;&#10;var scheduler = function(lines,start, end){&#10;    winston.profile('Time taken for '+batchsize);&#10;    Promise.all(processData(lines, start, end)).then(function(){&#10;        winston.profile('Time taken for '+batchsize);&#10;        var newStart = end;&#10;        var newEnd   = end + batchsize;&#10;        if(newEnd &gt; lines.length){&#10;            newEnd  = lines.length;&#10;        }&#10;        console.log('Scheduleing lines between '+newStart+ ' and ' + newEnd);&#10;        if(newStart &lt; lines.length){&#10;            scheduler(lines,newStart, newEnd)&#10;        }&#10;    })&#10;}&#10;&#10;var processData = function(line, start, end){&#10;    var promises = [];&#10;    var promise;&#10;    for(var i=start; i &lt; end; i++){&#10;        promises.push(pushQuotes(line[i]));&#10;    }&#10;    return promises;&#10;}&#10;&#10;module.exports = startMethod;&#10;&#10;startMethod(undefined, {send : function(){}}, undefined);" description="batch-scheduler - Synchronously do a batch task, helps in preventing out of memory" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_TEXT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="LUA" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="Bash" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_STATEMENT" value="true" />
+      <option name="TypeScript" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="HAML" value="false" />
+      <option name="JADE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="indicatortest" value="var $TYPE$ = require('../../lib/$indicatortype$/$TYPE$');&#10;var assert = require(&quot;assert&quot;);&#10;var data   = require('../data');&#10;&#10;var input$TYPE$ = data.close;&#10;var expectedResult = [&#10;  &#10;];&#10;&#10;describe('$TYPE$', function() {&#10;  it('should calculate $TYPE$ using the calculate method', function() {&#10;    assert.deepEqual($TYPE$.calculate(input$TYPE$, prices), expectedResult, 'Wrong Results');&#10;  });&#10;&#10;  it('should be able to get $TYPE$ for the next bar', function() {&#10;    var $instance$ = new $TYPE$(input$TYPE$, prices);&#10;    assert.deepEqual($instance$.getResult(),  expectedResult, 'Wrong Results while getting results');&#10;  })&#10;&#10;  it('should be able to get $TYPE$ for the next bar using nextValue', function() {&#10;    var $instance$ = new $TYPE$(input$TYPE$, []);&#10;    var results = [];&#10;    prices.forEach(price =&gt; {&#10;      var result = $instance$.nextValue(price);&#10;      if(result)&#10;        results.push(result)&#10;    });&#10;    assert.deepEqual(results,  expectedResult, 'Wrong Results while getting results');&#10;  })&#10;})" description="Create Template for testing indicators" toReformat="true" toShortenFQNames="true">
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="indicatortype" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="instance" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_TEXT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="LUA" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="Bash" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_STATEMENT" value="true" />
+      <option name="TypeScript" value="true" />
+      <option name="Handlebars" value="false" />
+      <option name="HAML" value="false" />
+      <option name="JADE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="cogen" value="co(function* () {&#10;    $CODE$      &#10;})" description="Genartor syntax using Co promise" toReformat="true" toShortenFQNames="true">
+    <variable name="CODE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_TEXT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="LUA" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="Bash" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_STATEMENT" value="true" />
+      <option name="TypeScript" value="true" />
+      <option name="Handlebars" value="false" />
+      <option name="HAML" value="false" />
+      <option name="JADE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="cowrap" value="co.wrap(function* () {&#10;    $CODE$      &#10;})" description="Co generator wrap for promises" toReformat="false" toShortenFQNames="true">
+    <variable name="CODE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="arrowfn" value="($PARAM$) =&gt; {&#10;  'use strict';&#10;  $CONTENT$&#10;}" description="Arrow function" toReformat="true" toShortenFQNames="true">
+    <variable name="PARAM" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_TEXT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="LUA" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="Bash" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_STATEMENT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="Handlebars" value="false" />
+      <option name="HAML" value="false" />
+      <option name="JADE" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="DART" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+</templateSet>
