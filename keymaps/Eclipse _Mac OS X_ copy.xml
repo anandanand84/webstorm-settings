@@ -1,4 +1,8 @@
 <keymap version="1" name="Eclipse (Mac OS X) copy" parent="Eclipse (Mac OS X)">
+  <action id="$Delete">
+    <keyboard-shortcut first-keystroke="delete" />
+    <keyboard-shortcut first-keystroke="back_space" />
+  </action>
   <action id="ActivateGruntToolWindow">
     <keyboard-shortcut first-keystroke="meta 8" />
   </action>
@@ -9,6 +13,7 @@
     <keyboard-shortcut first-keystroke="meta f12" />
     <keyboard-shortcut first-keystroke="meta 0" />
   </action>
+  <action id="EditorDelete" />
   <action id="EditorDuplicateLines">
     <keyboard-shortcut first-keystroke="meta alt down" />
     <keyboard-shortcut first-keystroke="ctrl meta alt down" />
@@ -49,8 +54,7 @@
     <keyboard-shortcut first-keystroke="meta f" />
   </action>
   <action id="JumpToLastChange">
-    <keyboard-shortcut first-keystroke="ctrl q" />
-    <keyboard-shortcut first-keystroke="ctrl p" />
+    <keyboard-shortcut first-keystroke="meta back_slash" />
   </action>
   <action id="MoveLineDown">
     <keyboard-shortcut first-keystroke="alt down" />
@@ -78,5 +82,9 @@
   </action>
   <action id="SwitchUp">
     <keyboard-shortcut first-keystroke="ctrl alt up" />
+  </action>
+  <action id="UsageView.Exclude">
+    <keyboard-shortcut first-keystroke="delete" />
+    <keyboard-shortcut first-keystroke="back_space" />
   </action>
 </keymap>
