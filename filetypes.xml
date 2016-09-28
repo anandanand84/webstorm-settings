@@ -2,6 +2,7 @@
   <component name="FileTypeManager" version="16">
     <extensionMap>
       <mapping ext="tpl" type="HTML" />
+      <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
       <mapping pattern="pendingtest" type="PLAIN_TEXT" />
       <mapping pattern="npm-auto-link" type="PLAIN_TEXT" />
       <mapping pattern=".babelrc" type="PLAIN_TEXT" />
