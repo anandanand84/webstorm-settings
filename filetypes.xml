@@ -8,6 +8,7 @@
       <mapping pattern="npm-auto-link" type="PLAIN_TEXT" />
       <mapping pattern=".babelrc" type="PLAIN_TEXT" />
       <mapping pattern="preparationscript.txt" type="PLAIN_TEXT" />
+      <mapping pattern="realtimestockscreener" type="PLAIN_TEXT" />
       <mapping pattern="scrapfile" type="PLAIN_TEXT" />
       <mapping pattern="reverseInputs" type="PLAIN_TEXT" />
       <mapping pattern="CM_trades" type="PLAIN_TEXT" />
