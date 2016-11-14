@@ -6,6 +6,7 @@
       <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
       <mapping pattern="pendingtest" type="PLAIN_TEXT" />
       <mapping pattern="performance-metrics" type="PLAIN_TEXT" />
+      <mapping pattern=".selenium.log.icloud" type="PLAIN_TEXT" />
       <mapping pattern=".babelrc" type="PLAIN_TEXT" />
       <mapping pattern="npm-auto-link" type="PLAIN_TEXT" />
       <mapping pattern="realtimestockscreener" type="PLAIN_TEXT" />
