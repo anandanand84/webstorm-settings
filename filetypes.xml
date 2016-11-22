@@ -4,6 +4,7 @@
       <mapping pattern="ubuntu-tlab-node" type="Dockerfile" />
       <mapping ext="tpl" type="HTML" />
       <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
+      <mapping pattern="rrrrr" type="PLAIN_TEXT" />
       <mapping pattern="pendingtest" type="PLAIN_TEXT" />
       <mapping pattern="performance-metrics" type="PLAIN_TEXT" />
       <mapping pattern=".selenium.log.icloud" type="PLAIN_TEXT" />
