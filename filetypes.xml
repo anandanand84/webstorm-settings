@@ -3,6 +3,7 @@
     <extensionMap>
       <mapping ext="tpl" type="HTML" />
       <mapping pattern=".dockerignore" type="PLAIN_TEXT" />
+      <mapping pattern="rrrrr" type="PLAIN_TEXT" />
       <mapping pattern="pendingtest" type="PLAIN_TEXT" />
       <mapping pattern="performance-metrics" type="PLAIN_TEXT" />
       <mapping pattern=".selenium.log.icloud" type="PLAIN_TEXT" />
@@ -11,7 +12,6 @@
       <mapping pattern="preparationscript.txt" type="PLAIN_TEXT" />
       <mapping pattern="realtimestockscreener" type="PLAIN_TEXT" />
       <mapping pattern="scrapfile" type="PLAIN_TEXT" />
-      <mapping pattern="rrrrr" type="PLAIN_TEXT" />
       <mapping pattern="reverseInputs" type="PLAIN_TEXT" />
       <mapping pattern="generate-config" type="PLAIN_TEXT" />
       <mapping pattern="sample_watch_response" type="PLAIN_TEXT" />
