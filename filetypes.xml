@@ -12,6 +12,7 @@
       <mapping pattern="realtimestockscreener" type="PLAIN_TEXT" />
       <mapping pattern="scrapfile" type="PLAIN_TEXT" />
       <mapping pattern="rrrrr" type="PLAIN_TEXT" />
+      <mapping pattern="Dockerfile" type="PLAIN_TEXT" />
       <mapping pattern="reverseInputs" type="PLAIN_TEXT" />
       <mapping pattern="generate-config" type="PLAIN_TEXT" />
       <mapping pattern="sample_watch_response" type="PLAIN_TEXT" />
